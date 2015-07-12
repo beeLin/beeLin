@@ -50,16 +50,31 @@ class ViewController: UIViewController, UIWebViewDelegate {
     func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
         NSLog("failed with %@", error)
     }
+
+    func resizeWebView() {
+        self.view.layoutIfNeeded()
+        self.constraintHeaderTop?.constant = -140
+        self.constraintHeaderBorderTop?.constant = 70
+        self.constraintUrlViewTop?.constant = 0
+//      self.constraintGoButtonWidth?.constant = 0
+        
+        UIView.animateWithDuration(0.4, animations: {
+            self.view.layoutIfNeeded()
+            }, completion: nil);
+        
+//        [UIView animateWithDuration:0.2
+//            animations:^{
+//            [self.view layoutIfNeeded]; // Called on parent view
+//            }];
+
+        self.webView?.hidden = false
+    }
     
     @IBAction func goTapped(sender: UIButton) {
         var urlText : NSString? = urlTextView?.text
         
         if (urlText != nil) {
-            self.constraintHeaderTop?.constant = -140
-            self.constraintHeaderBorderTop?.constant = 70
-            self.constraintUrlViewTop?.constant = 0
-//            self.constraintGoButtonWidth?.constant = 0
-            self.webView?.hidden = false
+            resizeWebView()
             loadWebView(urlText!)
         }
     }

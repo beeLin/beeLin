@@ -23,13 +23,13 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "beeLin_HomeScreen_Icon.png",
+      "filename" : "LT_120_beeLin_HomeScreen_Icon.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "beeLin_HomeScreen_Icon_180.png",
+      "filename" : "LT_180_beeLin_HomeScreen_Icon.png",
       "scale" : "3x"
     }
   ],

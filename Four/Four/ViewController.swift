@@ -16,7 +16,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.loadWebView()
+        self.loadWebView("blockstream.bit")
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,11 +24,10 @@ class ViewController: UIViewController, UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func loadWebView() {
+    func loadWebView(fqdn: NSString) {
         webView?.delegate = self
         
-        let fqdn : String = "blockstream.bit"
-        let req : NSURLRequest = chainClient.createRequest(fqdn)
+        let req : NSURLRequest = chainClient.createRequest(fqdn as String)
         webView?.loadRequest(req)
         
         //webView?.loadHTMLString("Hello World!", baseURL: nil)

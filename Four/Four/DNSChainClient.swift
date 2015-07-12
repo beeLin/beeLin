@@ -14,13 +14,28 @@ class DNSChainClient : NSObject  {
     
     // hostsname, e.g. "blockstream" (without .bit) to IP address string
     func resolve(hostname: NSString) -> String {
-        let keyVal : NSString = NSString(format: "d/%@", hostname)
-        let keyValEnc : NSString = keyVal.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!;
-        let urlString : NSString = NSString(format: "%@/v1/namecoin/key/%@", dnsChainBase, keyValEnc)
+        let keyVal : NSString = NSString(format: "d%@%@", "%2F", hostname)
+        let urlString : NSString = NSString(format: "%@/v1/namecoin/key/%@", dnsChainBase, keyVal)
         let reqURL : NSURL = NSURL(string:urlString as String)!
-        let request = NSMutableURLRequest()
-        
-        return "208.90.213.195"
+        let request = NSMutableURLRequest(URL: reqURL)
+
+        var response: NSURLResponse?
+        var err: NSError?
+        var dataVal = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: &err)
+        println(response)
+        var jsonResult: AnyObject? = NSJSONSerialization.JSONObjectWithData(dataVal!, options: NSJSONReadingOptions.MutableContainers, error: &err) as? NSDictionary
+        println("Synchronous\(jsonResult)")
+        var ipString : String = ""
+        if let json = jsonResult as? NSDictionary {
+            if let data = json["data"] as? NSDictionary {
+                if let value = data["value"] as? NSDictionary {
+                    if let ip = value["ip"] as? String {
+                        ipString = ip
+                    }
+                }
+            }
+        }
+        return ipString
     }
     
     func createRequest(urlString : String) -> NSURLRequest {

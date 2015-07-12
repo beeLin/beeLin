@@ -12,11 +12,18 @@ class ViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet var webView : UIWebView?
     @IBOutlet var urlTextView : UITextField?
+    @IBOutlet var constraintHeaderTop : NSLayoutConstraint?
+    @IBOutlet var constraintHeaderBorderTop : NSLayoutConstraint?
+    @IBOutlet var constraintUrlViewTop : NSLayoutConstraint?
+    @IBOutlet var constraintGoButtonWidth : NSLayoutConstraint?
     
     let chainClient : DNSChainClient = DNSChainClient()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.webView!.hidden = true
+        
         // Do any additional setup after loading the view, typically from a nib.
 //        self.loadWebView("blockstream.bit")
     }
@@ -48,6 +55,11 @@ class ViewController: UIViewController, UIWebViewDelegate {
         var urlText : NSString? = urlTextView?.text
         
         if (urlText != nil) {
+            self.constraintHeaderTop?.constant = -140
+            self.constraintHeaderBorderTop?.constant = 70
+            self.constraintUrlViewTop?.constant = 0
+//            self.constraintGoButtonWidth?.constant = 0
+            self.webView?.hidden = false
             loadWebView(urlText!)
         }
     }

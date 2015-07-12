@@ -118,9 +118,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		142DCF761B5198020026A183 /* Four */ = {
+		142DCF761B5198020026A183 /* beeLīn */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 142DCF961B5198020026A183 /* Build configuration list for PBXNativeTarget "Four" */;
+			buildConfigurationList = 142DCF961B5198020026A183 /* Build configuration list for PBXNativeTarget "beeLīn" */;
 			buildPhases = (
 				142DCF731B5198020026A183 /* Sources */,
 				142DCF741B5198020026A183 /* Frameworks */,
@@ -130,7 +130,7 @@
 			);
 			dependencies = (
 			);
-			name = Four;
+			name = "beeLīn";
 			productName = Four;
 			productReference = 142DCF771B5198020026A183 /* Four.app */;
 			productType = "com.apple.product-type.application";
@@ -185,7 +185,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				142DCF761B5198020026A183 /* Four */,
+				142DCF761B5198020026A183 /* beeLīn */,
 				142DCF8B1B5198020026A183 /* FourTests */,
 			);
 		};
@@ -235,7 +235,7 @@
 /* Begin PBXTargetDependency section */
 		142DCF8E1B5198020026A183 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 142DCF761B5198020026A183 /* Four */;
+			target = 142DCF761B5198020026A183 /* beeLīn */;
 			targetProxy = 142DCF8D1B5198020026A183 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -411,7 +411,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		142DCF961B5198020026A183 /* Build configuration list for PBXNativeTarget "Four" */ = {
+		142DCF961B5198020026A183 /* Build configuration list for PBXNativeTarget "beeLīn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				142DCF971B5198020026A183 /* Debug */,

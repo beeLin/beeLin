@@ -54,6 +54,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="khG-lO-YAJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,6 +64,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="736"/>
                     <connections>
+                        <outlet property="urlTextView" destination="nBh-8O-lnV" id="eRd-mC-dFU"/>
                         <outlet property="webView" destination="Cyk-xd-Fv8" id="foW-UA-5Ci"/>
                     </connections>
                 </viewController>

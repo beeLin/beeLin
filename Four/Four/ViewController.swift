@@ -11,12 +11,14 @@ import UIKit
 class ViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet var webView : UIWebView?
+    @IBOutlet var urlTextView : UITextField?
+    
     let chainClient : DNSChainClient = DNSChainClient()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.loadWebView("blockstream.bit")
+//        self.loadWebView("blockstream.bit")
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +42,14 @@ class ViewController: UIViewController, UIWebViewDelegate {
     
     func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
         NSLog("failed with %@", error)
+    }
+    
+    @IBAction func goTapped(sender: UIButton) {
+        var urlText : NSString? = urlTextView?.text
+        
+        if (urlText != nil) {
+            loadWebView(urlText!)
+        }
     }
 
 

@@ -29,8 +29,11 @@ class DNSChainClient : NSObject  {
         if let json = jsonResult as? NSDictionary {
             if let data = json["data"] as? NSDictionary {
                 if let value = data["value"] as? NSDictionary {
-                    if let ip = value["ip"] as? String {
-                        ipString = ip
+                    let ip : AnyObject? = value["ip"]
+                    if ip is String {
+                        ipString = (ip as? String)!
+                    } else if let ipArray = ip as? Array<String> {
+                        ipString = ipArray[0]
                     }
                 }
             }

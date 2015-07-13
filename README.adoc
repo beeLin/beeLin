@@ -8,3 +8,8 @@ NOTE:: This is an early prototype and should not be relied upon for security.
 
 We've created a list of link:wiki/Browser-Security-Features[Browser Security Features] to provide an overview of the Browser Security Landscape and to track what is and what isn't in this app.
 
+== Screenshots
+
+.Main view (initial)
+[caption="Screenshot 1: "]
+image::screenshots/beeLin_blank_main_6plus.jpg[Main view (initial)]

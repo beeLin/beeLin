@@ -1,0 +1,38 @@
+= beeLin Technical Reference
+
+== Introduction
+
+We intend to write a reference guide, eventually. For now, this document is a placeholder and bibliography.
+
+== Overview of DNS and HTTPS
+
+TBD.
+
+=== DNS
+
+TBD.
+
+=== HTTPS
+
+<<moser>> describes the process of creating an HTTPS connection.
+
+== DNSChain
+
+TBD.
+
+== iOS and Mac OS X Libraries
+
+TBD.
+
+== Operation
+
+TBD.
+
+== Conclusions
+
+TBD.
+
+[bibliography]
+.Bibliography
+
+- [[[moser]]] Jeff Moser. The First Few Milliseconds of an HTTPS Connection. http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html[Moserware.com]

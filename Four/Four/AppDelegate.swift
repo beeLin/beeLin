@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Four
 //
-//  Created by Sean Gilligan on 7/11/15.
-//  Copyright (c) 2015 Sean Gilligan. All rights reserved.
+//  Created by Sean Gilligan and Genevieve Primavera on 7/11/15.
+//  Copyright (c) 2015 Sean Gilligan and Genevieve Primavera. All rights reserved.
 //
 
 import UIKit

@@ -62,11 +62,6 @@ class ViewController: UIViewController, UIWebViewDelegate {
             self.view.layoutIfNeeded()
             }, completion: nil);
         
-//        [UIView animateWithDuration:0.2
-//            animations:^{
-//            [self.view layoutIfNeeded]; // Called on parent view
-//            }];
-
         self.webView?.hidden = false
     }
     

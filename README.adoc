@@ -1,8 +1,15 @@
-= ios-turtles
+= beeLīn
 
-An iOS web browser with some new security features 
+An iOS web browser that uses https://github.com/okTurtles/dnschain[dnsChain] and https://namecoin.info[NameCoin] to resolve `.bit` domains to resist censorship and surveillance.
+
+NOTE:: This is an early prototype and should not be relied upon for security.
 
 == Wiki Documentation
 
 We've created a list of link:wiki/Browser-Security-Features[Browser Security Features] to provide an overview of the Browser Security Landscape and to track what is and what isn't in this app.
 
+== Screenshots
+
+.Main view (initial)
+[caption="Screenshot 1: "]
+image::screenshots/beeLin_blank_main_6plus.jpg[Main view (initial)]

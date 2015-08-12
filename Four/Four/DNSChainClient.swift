@@ -29,8 +29,11 @@ class DNSChainClient : NSObject  {
         if let json = jsonResult as? NSDictionary {
             if let data = json["data"] as? NSDictionary {
                 if let value = data["value"] as? NSDictionary {
-                    if let ip = value["ip"] as? String {
-                        ipString = ip
+                    let ip : AnyObject? = value["ip"]
+                    if ip is String {
+                        ipString = (ip as? String)!
+                    } else if let ipArray = ip as? Array<String> {
+                        ipString = ipArray[0]
                     }
                 }
             }
@@ -39,13 +42,19 @@ class DNSChainClient : NSObject  {
     }
     
     func createRequest(urlString : String) -> NSURLRequest {
-        let hostName : String = hostnameFromBitDomain(urlString)
-        let ipAddr : String = resolve(hostName)
-        let ipURLString : String = String(format: "http://%@", ipAddr)
-        let url : NSURL! = NSURL(string:ipURLString)
+        var url : NSURL
+        
+        if (isDotBit(urlString)) {
+            let hostName : String = hostnameFromBitDomain(urlString)
+            let ipAddr : String = resolve(hostName)
+            let ipURLString : String = String(format: "http://%@", ipAddr)
+            url = NSURL(string:ipURLString)!
+        } else {
+            url = NSURL(string:"http://" + urlString)!
+        }
         
         var req : NSMutableURLRequest = NSMutableURLRequest(URL: url)
-        req.setValue(urlString, forHTTPHeaderField: "Host") // TODO: This doesn't work, is overwritten
+//        req.setValue(urlString, forHTTPHeaderField: "Host") // TODO: This doesn't work, is overwritten
 
         return req;
     }

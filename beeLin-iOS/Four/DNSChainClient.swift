@@ -13,6 +13,7 @@ class DNSChainClient : NSObject  {
     let dnsChainBase : String = "https://api.dnschain.net"
     
     // hostsname, e.g. "blockstream" (without .bit) to IP address string
+    // TODO: Handle hostnames with subdomains, e.g. www.blockstream.bit
     func resolve(hostname: NSString) -> String {
         let keyVal : NSString = NSString(format: "d%@%@", "%2F", hostname)
         let urlString : NSString = NSString(format: "%@/v1/namecoin/key/%@", dnsChainBase, keyVal)

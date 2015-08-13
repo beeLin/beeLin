@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1496C9021B7C136200724C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496C9011B7C136200724C79 /* AppDelegate.swift */; };
+		1496C9041B7C136200724C79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496C9031B7C136200724C79 /* ViewController.swift */; };
+		1496C9061B7C136200724C79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1496C9051B7C136200724C79 /* Images.xcassets */; };
+		1496C9091B7C136200724C79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1496C9071B7C136200724C79 /* Main.storyboard */; };
+		1496C9151B7C136300724C79 /* beeLinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496C9141B7C136300724C79 /* beeLinTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1496C90F1B7C136300724C79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1496C8F41B7C136200724C79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1496C8FB1B7C136200724C79;
+			remoteInfo = beeLin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1496C8FC1B7C136200724C79 /* beeLin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beeLin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1496C9001B7C136200724C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1496C9011B7C136200724C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1496C9031B7C136200724C79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1496C9051B7C136200724C79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1496C9081B7C136200724C79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1496C90E1B7C136300724C79 /* beeLinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beeLinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1496C9131B7C136300724C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1496C9141B7C136300724C79 /* beeLinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beeLinTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1496C8F91B7C136200724C79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1496C90B1B7C136300724C79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1496C8F31B7C136200724C79 = {
+			isa = PBXGroup;
+			children = (
+				1496C8FE1B7C136200724C79 /* beeLin */,
+				1496C9111B7C136300724C79 /* beeLinTests */,
+				1496C8FD1B7C136200724C79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1496C8FD1B7C136200724C79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1496C8FC1B7C136200724C79 /* beeLin.app */,
+				1496C90E1B7C136300724C79 /* beeLinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1496C8FE1B7C136200724C79 /* beeLin */ = {
+			isa = PBXGroup;
+			children = (
+				1496C9011B7C136200724C79 /* AppDelegate.swift */,
+				1496C9031B7C136200724C79 /* ViewController.swift */,
+				1496C9051B7C136200724C79 /* Images.xcassets */,
+				1496C9071B7C136200724C79 /* Main.storyboard */,
+				1496C8FF1B7C136200724C79 /* Supporting Files */,
+			);
+			path = beeLin;
+			sourceTree = "<group>";
+		};
+		1496C8FF1B7C136200724C79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1496C9001B7C136200724C79 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1496C9111B7C136300724C79 /* beeLinTests */ = {
+			isa = PBXGroup;
+			children = (
+				1496C9141B7C136300724C79 /* beeLinTests.swift */,
+				1496C9121B7C136300724C79 /* Supporting Files */,
+			);
+			path = beeLinTests;
+			sourceTree = "<group>";
+		};
+		1496C9121B7C136300724C79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1496C9131B7C136300724C79 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1496C8FB1B7C136200724C79 /* beeLin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1496C9181B7C136300724C79 /* Build configuration list for PBXNativeTarget "beeLin" */;
+			buildPhases = (
+				1496C8F81B7C136200724C79 /* Sources */,
+				1496C8F91B7C136200724C79 /* Frameworks */,
+				1496C8FA1B7C136200724C79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = beeLin;
+			productName = beeLin;
+			productReference = 1496C8FC1B7C136200724C79 /* beeLin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1496C90D1B7C136300724C79 /* beeLinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1496C91B1B7C136300724C79 /* Build configuration list for PBXNativeTarget "beeLinTests" */;
+			buildPhases = (
+				1496C90A1B7C136300724C79 /* Sources */,
+				1496C90B1B7C136300724C79 /* Frameworks */,
+				1496C90C1B7C136300724C79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1496C9101B7C136300724C79 /* PBXTargetDependency */,
+			);
+			name = beeLinTests;
+			productName = beeLinTests;
+			productReference = 1496C90E1B7C136300724C79 /* beeLinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1496C8F41B7C136200724C79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Sean Gilligan & Genevieve Primavera";
+				TargetAttributes = {
+					1496C8FB1B7C136200724C79 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					1496C90D1B7C136300724C79 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 1496C8FB1B7C136200724C79;
+					};
+				};
+			};
+			buildConfigurationList = 1496C8F71B7C136200724C79 /* Build configuration list for PBXProject "beeLin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1496C8F31B7C136200724C79;
+			productRefGroup = 1496C8FD1B7C136200724C79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1496C8FB1B7C136200724C79 /* beeLin */,
+				1496C90D1B7C136300724C79 /* beeLinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1496C8FA1B7C136200724C79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1496C9061B7C136200724C79 /* Images.xcassets in Resources */,
+				1496C9091B7C136200724C79 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1496C90C1B7C136300724C79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1496C8F81B7C136200724C79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1496C9041B7C136200724C79 /* ViewController.swift in Sources */,
+				1496C9021B7C136200724C79 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1496C90A1B7C136300724C79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1496C9151B7C136300724C79 /* beeLinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1496C9101B7C136300724C79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1496C8FB1B7C136200724C79 /* beeLin */;
+			targetProxy = 1496C90F1B7C136300724C79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1496C9071B7C136200724C79 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1496C9081B7C136200724C79 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1496C9161B7C136300724C79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1496C9171B7C136300724C79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1496C9191B7C136300724C79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = beeLin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1496C91A1B7C136300724C79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = beeLin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1496C91C1B7C136300724C79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = beeLinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beeLin.app/Contents/MacOS/beeLin";
+			};
+			name = Debug;
+		};
+		1496C91D1B7C136300724C79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = beeLinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beeLin.app/Contents/MacOS/beeLin";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1496C8F71B7C136200724C79 /* Build configuration list for PBXProject "beeLin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1496C9161B7C136300724C79 /* Debug */,
+				1496C9171B7C136300724C79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1496C9181B7C136300724C79 /* Build configuration list for PBXNativeTarget "beeLin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1496C9191B7C136300724C79 /* Debug */,
+				1496C91A1B7C136300724C79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1496C91B1B7C136300724C79 /* Build configuration list for PBXNativeTarget "beeLinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1496C91C1B7C136300724C79 /* Debug */,
+				1496C91D1B7C136300724C79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1496C8F41B7C136200724C79 /* Project object */;
+}

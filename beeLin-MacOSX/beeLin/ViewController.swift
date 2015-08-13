@@ -7,13 +7,29 @@
 //
 
 import Cocoa
+import WebKit
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, WKNavigationDelegate {
 
+    var webView : WKWebView
+    @IBOutlet var urlTextField : NSTextField?
+    
+    required init?(coder: NSCoder) {
+        self.webView = WKWebView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 500, height: 500)))
+        super.init(coder: coder)
+        
+        self.webView.navigationDelegate = self
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        view.addSubview(webView, positioned: NSWindowOrderingMode.Below, relativeTo: urlTextField)
+        let url = NSURL(string:"http://genevieveprimavera.com")
+        let request = NSURLRequest(URL:url!)
+        webView.loadRequest(request)
     }
 
     override var representedObject: AnyObject? {

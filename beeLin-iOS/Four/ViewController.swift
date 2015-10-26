@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIWebViewDelegate {
+class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate {
     
     @IBOutlet var webView : UIWebView?
     @IBOutlet var urlTextView : UITextField?
@@ -36,8 +36,8 @@ class ViewController: UIViewController, UIWebViewDelegate {
     func loadWebView(fqdn: NSString) {
         webView?.delegate = self
         
-        let req : NSURLRequest = chainClient.createRequest(fqdn as String)
-        webView?.loadRequest(req)
+        let req : NSURLRequest? = try? chainClient.createRequest(fqdn as String)
+        webView?.loadRequest(req!)
         
         //webView?.loadHTMLString("Hello World!", baseURL: nil)
         
@@ -47,8 +47,8 @@ class ViewController: UIViewController, UIWebViewDelegate {
         NSLog("succeeded")
     }
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
-        NSLog("failed with %@", error)
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+        NSLog("failed with %@", error!)
     }
 
     func resizeWebView() {
@@ -66,7 +66,21 @@ class ViewController: UIViewController, UIWebViewDelegate {
     }
     
     @IBAction func goTapped(sender: UIButton) {
-        var urlText : NSString? = urlTextView?.text
+        self.loadFromUrlTextView()
+    }
+
+    //MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        self.loadFromUrlTextView()
+        
+        return true
+    }
+    
+    func loadFromUrlTextView() {
+        let urlText : NSString? = urlTextView?.text
         
         if (urlText != nil) {
             resizeWebView()

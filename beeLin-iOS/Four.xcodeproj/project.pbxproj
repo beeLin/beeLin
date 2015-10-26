@@ -27,14 +27,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		142DCF771B5198020026A183 /* Four.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Four.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		142DCF771B5198020026A183 /* beeLīn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beeLīn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		142DCF7B1B5198020026A183 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		142DCF7C1B5198020026A183 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		142DCF7E1B5198020026A183 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		142DCF811B5198020026A183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		142DCF831B5198020026A183 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		142DCF861B5198020026A183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		142DCF8C1B5198020026A183 /* FourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		142DCF8C1B5198020026A183 /* beeLīn Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "beeLīn Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		142DCF911B5198020026A183 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		142DCF921B5198020026A183 /* FourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourTests.swift; sourceTree = "<group>"; };
 		148527BB1B51C45D0041517D /* DNSChainClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSChainClient.swift; sourceTree = "<group>"; };
@@ -70,8 +70,8 @@
 		142DCF781B5198020026A183 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				142DCF771B5198020026A183 /* Four.app */,
-				142DCF8C1B5198020026A183 /* FourTests.xctest */,
+				142DCF771B5198020026A183 /* beeLīn.app */,
+				142DCF8C1B5198020026A183 /* beeLīn Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,12 +132,12 @@
 			);
 			name = "beeLīn";
 			productName = Four;
-			productReference = 142DCF771B5198020026A183 /* Four.app */;
+			productReference = 142DCF771B5198020026A183 /* beeLīn.app */;
 			productType = "com.apple.product-type.application";
 		};
-		142DCF8B1B5198020026A183 /* FourTests */ = {
+		142DCF8B1B5198020026A183 /* beeLīn Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 142DCF991B5198020026A183 /* Build configuration list for PBXNativeTarget "FourTests" */;
+			buildConfigurationList = 142DCF991B5198020026A183 /* Build configuration list for PBXNativeTarget "beeLīn Tests" */;
 			buildPhases = (
 				142DCF881B5198020026A183 /* Sources */,
 				142DCF891B5198020026A183 /* Frameworks */,
@@ -148,9 +148,9 @@
 			dependencies = (
 				142DCF8E1B5198020026A183 /* PBXTargetDependency */,
 			);
-			name = FourTests;
+			name = "beeLīn Tests";
 			productName = FourTests;
-			productReference = 142DCF8C1B5198020026A183 /* FourTests.xctest */;
+			productReference = 142DCF8C1B5198020026A183 /* beeLīn Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -159,7 +159,8 @@
 		142DCF6F1B5198020026A183 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Sean Gilligan";
 				TargetAttributes = {
 					142DCF761B5198020026A183 = {
@@ -186,7 +187,7 @@
 			projectRoot = "";
 			targets = (
 				142DCF761B5198020026A183 /* beeLīn */,
-				142DCF8B1B5198020026A183 /* FourTests */,
+				142DCF8B1B5198020026A183 /* beeLīn Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -281,6 +282,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -296,10 +298,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos9.0;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -334,9 +336,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos9.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -349,6 +351,7 @@
 				INFOPLIST_FILE = Four/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.msgilligan.beeLin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -361,6 +364,7 @@
 				INFOPLIST_FILE = Four/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.msgilligan.beeLin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -369,18 +373,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = FourTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msgilligan.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Four.app/Four";
+				SDKROOT = iphoneos9.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beeLīn.app/beeLīn";
 			};
 			name = Debug;
 		};
@@ -388,14 +391,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = FourTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msgilligan.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Four.app/Four";
+				SDKROOT = iphoneos9.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beeLīn.app/beeLīn";
 			};
 			name = Release;
 		};
@@ -420,7 +422,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		142DCF991B5198020026A183 /* Build configuration list for PBXNativeTarget "FourTests" */ = {
+		142DCF991B5198020026A183 /* Build configuration list for PBXNativeTarget "beeLīn Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				142DCF9A1B5198020026A183 /* Debug */,

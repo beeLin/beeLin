@@ -9,23 +9,22 @@
 import Foundation
 
 class DNSChainClient : NSObject  {
-    let dotBitPattern : String = "^[^\\.]*\\.bit$"
+    let dotBitPattern : String = "^.*\\.bit$"
     let dnsChainBase : String = "https://api.dnschain.net"
     
     // hostsname, e.g. "blockstream" (without .bit) to IP address string
     // TODO: Handle hostnames with subdomains, e.g. www.blockstream.bit
-    func resolve(hostname: NSString) -> String {
+    func resolve(hostname: NSString) throws -> String {
         let keyVal : NSString = NSString(format: "d%@%@", "%2F", hostname)
         let urlString : NSString = NSString(format: "%@/v1/namecoin/key/%@", dnsChainBase, keyVal)
         let reqURL : NSURL = NSURL(string:urlString as String)!
         let request = NSMutableURLRequest(URL: reqURL)
 
         var response: NSURLResponse?
-        var err: NSError?
-        var dataVal = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: &err)
-        println(response)
-        var jsonResult: AnyObject? = NSJSONSerialization.JSONObjectWithData(dataVal!, options: NSJSONReadingOptions.MutableContainers, error: &err) as? NSDictionary
-        println("Synchronous\(jsonResult)")
+        let dataVal = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
+        print(response)
+        let jsonResult: AnyObject? = try? NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers)
+        print("Synchronous\(jsonResult)")
         var ipString : String = ""
         if let json = jsonResult as? NSDictionary {
             if let data = json["data"] as? NSDictionary {
@@ -42,19 +41,19 @@ class DNSChainClient : NSObject  {
         return ipString
     }
     
-    func createRequest(urlString : String) -> NSURLRequest {
+    func createRequest(urlString : String) throws -> NSURLRequest {
         var url : NSURL
         
         if (isDotBit(urlString)) {
             let hostName : String = hostnameFromBitDomain(urlString)
-            let ipAddr : String = resolve(hostName)
+            let ipAddr : String = try resolve(hostName)
             let ipURLString : String = String(format: "http://%@", ipAddr)
             url = NSURL(string:ipURLString)!
         } else {
             url = NSURL(string:"http://" + urlString)!
         }
         
-        var req : NSMutableURLRequest = NSMutableURLRequest(URL: url)
+        let req : NSMutableURLRequest = NSMutableURLRequest(URL: url)
 //        req.setValue(urlString, forHTTPHeaderField: "Host") // TODO: This doesn't work, is overwritten
 
         return req;
@@ -65,7 +64,7 @@ class DNSChainClient : NSObject  {
     }
     
     func hostnameFromBitDomain(fqdn : String) -> String {
-        let range = Range(start: fqdn.startIndex, end: (advance(fqdn.endIndex, -4)))
+        let range = Range(start: fqdn.startIndex, end: (fqdn.endIndex.advancedBy(-4)))
         return fqdn.substringWithRange(range)
     }
 
